@@ -1,13 +1,38 @@
+import 'package:blinkit/repository/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatelessWidget {
-  const CartScreen({super.key});
+  final List<Map<String, dynamic>> productList = [
+    {
+      "name": "Amul Taaza Toned Fresh Milk",
+      "price": 27.0,
+      "time": "16 MINS",
+      "image": "milkP.png",
+    },
+    {
+      "name": "Potato (Aloo)",
+      "price": 37.0,
+      "time": "16 MINS",
+      "image": "potatoP.png",
+    },
+    {
+      "name": "Hybrid Tomato",
+      "price": 37.0,
+      "time": "16 MINS",
+      "image": "tomatoP.png",
+    },
+  ];
+
+  CartScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(toolbarHeight: -11,backgroundColor: Color(0XFFF9D56A), elevation: 0,)
-      ,
+      appBar: AppBar(
+        toolbarHeight: -11,
+        backgroundColor: Color(0XFFF9D56A),
+        elevation: 0,
+      ),
 
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,7 +63,7 @@ class CartScreen extends StatelessWidget {
                           style: TextStyle(
                             fontFamily: 'PoppinsB',
                             fontSize: 12,
-                            letterSpacing: 1 
+                            letterSpacing: 1,
                           ),
                         ),
                         Text(
@@ -50,27 +75,38 @@ class CartScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 20,),
-                    SizedBox(height: 37, width: 346, child: TextField(
-                      
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        
-                        hintText: "Search 'ice-cream'",
-                        prefixIcon: Icon(Icons.search, color: Colors.black,size: 14,),
-                        suffixIcon: Icon(Icons.mic, color: Colors.black, size: 14,),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide: BorderSide(color: Colors.white)
+                    SizedBox(height: 20),
+                    SizedBox(
+                      height: 37,
+                      width: 346,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+
+                          hintText: "Search 'ice-cream'",
+                          prefixIcon: Icon(
+                            Icons.search,
+                            color: Colors.black,
+                            size: 14,
+                          ),
+                          suffixIcon: Icon(
+                            Icons.mic,
+                            color: Colors.black,
+                            size: 14,
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                            borderSide: BorderSide(color: Colors.white),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                            borderSide: BorderSide(color: Colors.black),
+                          ),
+                          contentPadding: EdgeInsets.all(10),
                         ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide: BorderSide(color: Colors.black)
-                        ),
-                        contentPadding: EdgeInsets.all(10)
                       ),
-                    )),
+                    ),
                   ],
                 ),
               ),
@@ -89,23 +125,45 @@ class CartScreen extends StatelessWidget {
           Container(
             alignment: Alignment.center,
             margin: EdgeInsets.only(top: 12),
-            child: Image.asset("assets/images/shopping-cart.png", ),),
-            Center(
-              child: Text("Reordering will be easy", style: TextStyle(
-                fontSize: 16,
-                fontFamily: 'PoppinsB',  
-              ),),),
-            Center(
-              child: Text("Items you order will show up here so you can buy\n them again easily.", style: TextStyle(
-                fontSize: 10,
-                fontFamily: 'PoppinsR',  
-              ),
+            child: Image.asset("assets/images/shopping-cart.png"),
+          ),
+          Center(
+            child: Text(
+              "Reordering will be easy",
+              style: TextStyle(fontSize: 16, fontFamily: 'PoppinsB'),
+            ),
+          ),
+          Center(
+            child: Text(
+              "Items you order will show up here so you can buy\n them again easily.",
+              style: TextStyle(fontSize: 10, fontFamily: 'PoppinsR'),
               textAlign: TextAlign.center,
-              
-              ),
-            )
+            ),
+          ),
+
+          Container(
+            margin: EdgeInsets.only(top: 20, left: 18, bottom: 7),
+            child: Text("Bestsellers", style: TextStyle(fontFamily: 'PoppinsB',fontSize:  16),),
+          ),
+
+          Container(
+            height: 179,
+            margin: EdgeInsets.only(left: 10),
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: productList.length,
+              itemBuilder: (context, index) {
+                final product = productList[index];
+                return ProductCard(
+                  image: product['image'],
+                  name: product['name'],
+                  time: product['time'],
+                  price: product['price'] as double,
+                );
+              },
+            ),
+          ),
         ],
-        
       ),
     );
   }
