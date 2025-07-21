@@ -1,3 +1,4 @@
+import 'package:blinkit/repository/widgets/status_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,7 +7,12 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("Home Screen")),
+      appBar: AppBar(
+        backgroundColor: Color(0XFFF9D56A),
+        toolbarHeight: -11,
+        elevation: 0,
+      ),
+      body: Column(children: [StatusBar()]),
     );
   }
 }

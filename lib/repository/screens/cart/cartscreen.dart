@@ -1,4 +1,5 @@
 import 'package:blinkit/repository/widgets/product_card.dart';
+import 'package:blinkit/repository/widgets/status_bar.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatelessWidget {
@@ -37,90 +38,7 @@ class CartScreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // SizedBox(height: 48),
-          Stack(
-            children: [
-              Container(
-                height: 160,
-                width: double.infinity,
-                color: Color(0XFFF9D56A),
-                padding: EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Blinkit in",
-                      style: TextStyle(fontFamily: 'PoppinsB', fontSize: 12),
-                    ),
-                    Text(
-                      "16 minutes",
-                      style: TextStyle(fontFamily: 'PoppinsB', fontSize: 20),
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          "HOME - ",
-                          style: TextStyle(
-                            fontFamily: 'PoppinsB',
-                            fontSize: 12,
-                            letterSpacing: 1,
-                          ),
-                        ),
-                        Text(
-                          "Sujal Dave, Ratanada, Jodhpur (Raj)",
-                          style: TextStyle(
-                            fontFamily: 'PoppinsR',
-                            fontSize: 12,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 20),
-                    SizedBox(
-                      height: 37,
-                      width: 346,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          filled: true,
-                          fillColor: Colors.white,
-
-                          hintText: "Search 'ice-cream'",
-                          prefixIcon: Icon(
-                            Icons.search,
-                            color: Colors.black,
-                            size: 14,
-                          ),
-                          suffixIcon: Icon(
-                            Icons.mic,
-                            color: Colors.black,
-                            size: 14,
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: BorderSide(color: Colors.white),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: BorderSide(color: Colors.black),
-                          ),
-                          contentPadding: EdgeInsets.all(10),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Positioned(
-                right: 20,
-                bottom: 90,
-                child: CircleAvatar(
-                  radius: 15,
-                  backgroundColor: Colors.white,
-                  child: Icon(Icons.person, color: Colors.black),
-                ),
-              ),
-            ],
-          ),
+          StatusBar(),
 
           Container(
             alignment: Alignment.center,
@@ -143,11 +61,14 @@ class CartScreen extends StatelessWidget {
 
           Container(
             margin: EdgeInsets.only(top: 20, left: 18, bottom: 7),
-            child: Text("Bestsellers", style: TextStyle(fontFamily: 'PoppinsB',fontSize:  16),),
+            child: Text(
+              "Bestsellers",
+              style: TextStyle(fontFamily: 'PoppinsB', fontSize: 16),
+            ),
           ),
 
           Container(
-            height: 179,
+            height: 225,
             margin: EdgeInsets.only(left: 10),
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
