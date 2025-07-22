@@ -35,56 +35,58 @@ class CartScreen extends StatelessWidget {
         elevation: 0,
       ),
 
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          StatusBar(),
-
-          Container(
-            alignment: Alignment.center,
-            margin: EdgeInsets.only(top: 12),
-            child: Image.asset("assets/images/shopping-cart.png"),
-          ),
-          Center(
-            child: Text(
-              "Reordering will be easy",
-              style: TextStyle(fontSize: 16, fontFamily: 'PoppinsB'),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            StatusBar(),
+        
+            Container(
+              alignment: Alignment.center,
+              margin: EdgeInsets.only(top: 12),
+              child: Image.asset("assets/images/shopping-cart.png"),
             ),
-          ),
-          Center(
-            child: Text(
-              "Items you order will show up here so you can buy\n them again easily.",
-              style: TextStyle(fontSize: 10, fontFamily: 'PoppinsR'),
-              textAlign: TextAlign.center,
+            Center(
+              child: Text(
+                "Reordering will be easy",
+                style: TextStyle(fontSize: 16, fontFamily: 'PoppinsB'),
+              ),
             ),
-          ),
-
-          Container(
-            margin: EdgeInsets.only(top: 20, left: 18, bottom: 7),
-            child: Text(
-              "Bestsellers",
-              style: TextStyle(fontFamily: 'PoppinsB', fontSize: 16),
+            Center(
+              child: Text(
+                "Items you order will show up here so you can buy\n them again easily.",
+                style: TextStyle(fontSize: 10, fontFamily: 'PoppinsR'),
+                textAlign: TextAlign.center,
+              ),
             ),
-          ),
-
-          Container(
-            height: 225,
-            margin: EdgeInsets.only(left: 10),
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: productList.length,
-              itemBuilder: (context, index) {
-                final product = productList[index];
-                return ProductCard(
-                  image: product['image'],
-                  name: product['name'],
-                  time: product['time'],
-                  price: product['price'] as double,
-                );
-              },
+        
+            Container(
+              margin: EdgeInsets.only(top: 20, left: 18, bottom: 7),
+              child: Text(
+                "Bestsellers",
+                style: TextStyle(fontFamily: 'PoppinsB', fontSize: 16),
+              ),
             ),
-          ),
-        ],
+        
+            Container(
+              height: 225,
+              margin: EdgeInsets.only(left: 10),
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: productList.length,
+                itemBuilder: (context, index) {
+                  final product = productList[index];
+                  return ProductCard(
+                    image: product['image'],
+                    name: product['name'],
+                    time: product['time'],
+                    price: product['price'] as double,
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
