@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 class StatusBar extends StatelessWidget {
-  const StatusBar({super.key});
+  final Color backgroundColor;
+  final Color color;
+  const StatusBar({
+    super.key,
+    this.backgroundColor = const Color(0XFFF9D56A), // Default color
+    this.color = Colors.black, // Default color
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,18 +18,18 @@ class StatusBar extends StatelessWidget {
           height: 160,
           width: double.infinity,
 
-          color: Color(0XFFF9D56A),
+          color: backgroundColor,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 "Blinkit in",
-                style: TextStyle(fontFamily: 'poppinsB', fontSize: 12),
+                style: TextStyle(fontFamily: 'poppinsB', fontSize: 12, color: color),
               ),
 
               Text(
                 "16 minutes",
-                style: TextStyle(fontFamily: 'poppinsB', fontSize: 20),
+                style: TextStyle(fontFamily: 'poppinsB', fontSize: 20 , color: color),
               ),
 
               Row(
@@ -34,11 +40,12 @@ class StatusBar extends StatelessWidget {
                       fontFamily: 'poppinsB',
                       fontSize: 12,
                       letterSpacing: 1.5,
+                      color: color
                     ),
                   ),
                   Text(
                     "Sujal Dave, Ratanada, Jodhpur (Raj)",
-                    style: TextStyle(fontFamily: 'poppinsR', fontSize: 12),
+                    style: TextStyle(fontFamily: 'poppinsR', fontSize: 12, color: color),
                   ),
                 ],
               ),
