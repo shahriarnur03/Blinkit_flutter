@@ -1,5 +1,4 @@
 import 'package:blinkit/features/category/widgets/category_list.dart';
-import 'package:blinkit/core/widgets/product_type_card.dart';
 import 'package:blinkit/core/widgets/status_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -72,8 +71,6 @@ class CategoryScreen extends StatelessWidget {
             ProductList(pTypeList: pTypeList3),
         
             ProductList(pTypeList: pTypeList4),
-
-            
           ],
         ),
       ),
