@@ -1,6 +1,6 @@
-import 'package:blinkit/category/widgets/category_list.dart';
+import 'package:blinkit/features/category/widgets/category_list.dart';
 import 'package:blinkit/core/widgets/product_card.dart';
-import 'package:blinkit/home/widgets/sales_item_card.dart';
+import 'package:blinkit/features/home/widgets/sales_item_card.dart';
 import 'package:blinkit/core/widgets/status_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';

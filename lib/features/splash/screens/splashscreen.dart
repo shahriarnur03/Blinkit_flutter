@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:blinkit/config/appcolors.dart';
-import 'package:blinkit/auth/screens/loginscreen.dart';
+import 'package:blinkit/features/auth/screens/loginscreen.dart';
 import 'package:blinkit/core/helpers/uihelper.dart';
 import 'package:flutter/material.dart';
 

@@ -1,8 +1,8 @@
-import 'package:blinkit/cart/screens/cartscreen.dart';
-import 'package:blinkit/category/screens/categoryscreen.dart';
-import 'package:blinkit/home/screens/homescreen.dart';
+import 'package:blinkit/features/cart/screens/cartscreen.dart';
+import 'package:blinkit/features/category/screens/categoryscreen.dart';
+import 'package:blinkit/features/home/screens/homescreen.dart';
 import 'package:blinkit/core/helpers/uihelper.dart';
-import 'package:blinkit/print/screens/print_screen.dart';
+import 'package:blinkit/features/print/screens/print_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavScreen extends StatefulWidget {

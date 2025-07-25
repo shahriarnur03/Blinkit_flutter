@@ -1,4 +1,4 @@
-import 'package:blinkit/nevigation/bottomnavscreen.dart';
+import 'package:blinkit/features/nevigation/bottomnavscreen.dart';
 import 'package:blinkit/core/helpers/uihelper.dart';
 import 'package:flutter/material.dart';
 
