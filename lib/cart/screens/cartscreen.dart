@@ -1,5 +1,5 @@
-import 'package:blinkit/repository/widgets/product_card.dart';
-import 'package:blinkit/repository/widgets/status_bar.dart';
+import 'package:blinkit/core/widgets/product_card.dart';
+import 'package:blinkit/core/widgets/status_bar.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatelessWidget {

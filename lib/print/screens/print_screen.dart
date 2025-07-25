@@ -1,4 +1,4 @@
-import 'package:blinkit/repository/widgets/status_bar.dart';
+import 'package:blinkit/core/widgets/status_bar.dart';
 import 'package:flutter/material.dart';
 
 class PrintScreen extends StatelessWidget {

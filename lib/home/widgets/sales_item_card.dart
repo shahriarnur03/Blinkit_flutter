@@ -12,7 +12,7 @@ class SalesItemCard extends StatelessWidget {
     return Container(
       padding: EdgeInsets.only(top: 5, bottom: 2),
       // height: 108,
-      width: 86,
+      width: 90,
       margin: EdgeInsets.only(left: 10),
       decoration: BoxDecoration(
         color: Color(0XFFEAD3D3),

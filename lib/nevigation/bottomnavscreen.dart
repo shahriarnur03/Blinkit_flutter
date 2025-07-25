@@ -1,18 +1,18 @@
-import 'package:blinkit/repository/screens/cart/cartscreen.dart';
-import 'package:blinkit/repository/screens/category/categoryscreen.dart';
-import 'package:blinkit/repository/screens/home/homescreen.dart';
-import 'package:blinkit/repository/screens/print/printscreen.dart';
-import 'package:blinkit/repository/widgets/uihelper.dart';
+import 'package:blinkit/cart/screens/cartscreen.dart';
+import 'package:blinkit/category/screens/categoryscreen.dart';
+import 'package:blinkit/home/screens/homescreen.dart';
+import 'package:blinkit/core/helpers/uihelper.dart';
+import 'package:blinkit/print/screens/print_screen.dart';
 import 'package:flutter/material.dart';
 
-class ButtomNavScreen extends StatefulWidget {
-  const ButtomNavScreen({super.key});
+class BottomNavScreen extends StatefulWidget {
+  const BottomNavScreen({super.key});
 
   @override
-  State<ButtomNavScreen> createState() => _ButtomNavScreenState();
+  State<BottomNavScreen> createState() => _BottomNavScreenState();
 }
 
-class _ButtomNavScreenState extends State<ButtomNavScreen> {
+class _BottomNavScreenState extends State<BottomNavScreen> {
   int currentIndex = 0;
   List<Widget> pages = [
     HomeScreen(),

@@ -1,7 +1,7 @@
 import 'dart:async';
-import 'package:blinkit/domain/constants/appcolors.dart';
-import 'package:blinkit/repository/screens/login/loginscreen.dart';
-import 'package:blinkit/repository/widgets/uihelper.dart';
+import 'package:blinkit/config/appcolors.dart';
+import 'package:blinkit/auth/screens/loginscreen.dart';
+import 'package:blinkit/core/helpers/uihelper.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {

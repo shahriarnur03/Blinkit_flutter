@@ -1,4 +1,4 @@
-import 'package:blinkit/repository/widgets/product_type_card.dart';
+import 'package:blinkit/core/widgets/product_type_card.dart';
 import 'package:flutter/material.dart';
 
 class ProductList extends StatelessWidget {
